@@ -1,0 +1,45 @@
+{
+	"expo": {
+		"name": "DocNote",
+		"slug": "docnote",
+		"version": "1.0.0",
+		"orientation": "portrait",
+		"icon": "./assets/icon.webp",
+		"userInterfaceStyle": "light",
+		"newArchEnabled": true,
+		"splash": {
+			"image": "./assets/icon.webp",
+			"resizeMode": "contain",
+			"backgroundColor": "#ffffff"
+		},
+		"ios": {
+			"supportsTablet": true,
+			"infoPlist": {
+				"NSMicrophoneUsageDescription": "This app needs access to your microphone to record audio for medical transcription.",
+				"UIBackgroundModes": ["audio"]
+			}
+		},
+		"android": {
+			"adaptiveIcon": {
+				"foregroundImage": "./assets/icon.webp",
+				"backgroundColor": "#ffffff"
+			},
+			"permissions": [
+				"RECORD_AUDIO",
+				"WRITE_EXTERNAL_STORAGE",
+				"READ_EXTERNAL_STORAGE"
+			]
+		},
+		"web": {
+			"favicon": "./assets/icon.webp"
+		},
+		"plugins": [
+			[
+				"expo-av",
+				{
+					"microphonePermission": "Allow DocNote to access your microphone."
+				}
+			]
+		]
+	}
+}
